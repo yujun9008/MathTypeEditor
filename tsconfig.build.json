@@ -1,0 +1,29 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false
+  },
+  "include": [
+    "MathTypeEditor.tsx",
+    "const.ts",
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "demo",
+    "examples",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/vite.config.ts",
+    "**/vite.config.js"
+  ]
+}

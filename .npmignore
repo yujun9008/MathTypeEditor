@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Development files
+demo/
+vite.config.ts
+tsconfig*.json
+
+
+
+# Source files (will be compiled to dist)
+src/
+styles/
