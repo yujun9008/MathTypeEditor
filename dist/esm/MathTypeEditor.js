@@ -83,6 +83,7 @@ const MathEditor = ({ defaultValue, onChange, style }) => {
                 gap: 10px 0px ;
                 align-items:center;
                 overflow: hidden; 
+                width: 100%;
             }
             ::-webkit-scrollbar {
               width: 8px;

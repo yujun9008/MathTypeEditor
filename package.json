@@ -45,22 +45,22 @@
   },
   "homepage": "https://github.com/math-type/editor#readme",
   "peerDependencies": {
+    "antd": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "antd": "^5.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
     "katex": "^0.16.0",
-    "mathlive": "^0.90.1"
+    "mathlive": "^0.98.6"
   },
   "devDependencies": {
+    "@types/katex": "^0.16.0",
+    "@types/node": "^18.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@types/katex": "^0.16.0",
-    "typescript": "^4.9.0",
-    "vite": "^4.0.0",
     "@vitejs/plugin-react": "^3.0.0",
     "less": "^4.1.0",
-    "@types/node": "^18.0.0"
+    "typescript": "^4.9.0",
+    "vite": "^4.0.0"
   }
 }

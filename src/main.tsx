@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import MathEditor from './MathTypeEditor';
 import 'antd/dist/reset.css'; // Ant Design 5.x 的新样式导入方式
 import '../styles/mathType.less';
-import katex from 'katex'
 
 const App = () => {
-  const [formula, setFormula] = React.useState<string>('\\frac{1}{x}');
+  const [formula, setFormula] = React.useState<string>('');
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
@@ -18,20 +17,6 @@ const App = () => {
           style={{ width: '100%', border: '1px solid #ddd', borderRadius: '8px', padding: '16px' }}
         />
       </div>
-      {/* <div style={{ maxWidth: '800px', margin: '20px auto', padding: '16px', backgroundColor: '#f9f9f9', borderRadius: '8px' }}>
-        <h3>实时LaTeX输出:</h3>
-        <pre style={{
-          backgroundColor: '#f5f5f5',
-          padding: '12px',
-          borderRadius: '4px',
-          whiteSpace: 'pre-wrap',
-          wordBreak: 'break-all'
-        }} dangerouslySetInnerHTML={{
-          __html: katex.renderToString(formula, { throwOnError: false, strict: false, trust: true }),
-        }}>
-
-        </pre>
-      </div> */}
     </div>
   );
 };

@@ -39,6 +39,7 @@ const MathEditor: React.FC<MathEditorProps> = ({ defaultValue, onChange, style }
   // Sync internal changes to parent
   useEffect(() => {
     if (onChange) {
+      console.log('value', latexVal)
       onChange(latexVal)
     }
   }, [latexVal])
@@ -97,6 +98,7 @@ const MathEditor: React.FC<MathEditorProps> = ({ defaultValue, onChange, style }
                 gap: 10px 0px ;
                 align-items:center;
                 overflow: hidden; 
+                width: 100%;
             }
             ::-webkit-scrollbar {
               width: 8px;

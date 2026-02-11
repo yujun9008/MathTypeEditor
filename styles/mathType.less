@@ -27,7 +27,13 @@
 .previewKatax {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
+  .katex{
+    overflow-x: auto;
+    max-width: 687px;
+    display: inline-block;
+    overflow-y: hidden;
+  }
 }
 
 math-field {
@@ -89,10 +95,7 @@ math-field::part(menu-toggle) {
 .mathTabs {
   height: 240px;
   margin-top: 10px;
-
-  :global {
-    .ant-tabs-tab + .ant-tabs-tab {
-      margin-left: 20px;
-    }
+  &.ant-tabs .ant-tabs-tab+.ant-tabs-tab{
+    margin-left: 25px;
   }
 }
