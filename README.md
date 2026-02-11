@@ -21,6 +21,7 @@ npm install react-mathtype-editor
 
 ## 使用方法
 
+```
 import React, { useState } from 'react';
 import { MathEditor } from 'react-mathtype-editor';
 import 'react-mathtype-editor/dist/style.css';
