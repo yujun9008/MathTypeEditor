@@ -30,6 +30,7 @@ const MathEditor = ({ defaultValue, onChange, style }) => {
     // Sync internal changes to parent
     useEffect(() => {
         if (onChange) {
+            console.log('value', latexVal);
             onChange(latexVal);
         }
     }, [latexVal]);

@@ -16,15 +16,14 @@
 ## 安装
 
 ```bash
-npm install @math-type/editor
+npm install react-mathtype-editor
 ```
 
 ## 使用方法
 
-```jsx
 import React, { useState } from 'react';
-import { MathEditor } from '@math-type/editor';
-import '@math-type/editor/dist/style.css';
+import { MathEditor } from 'react-mathtype-editor';
+import 'react-mathtype-editor/dist/style.css';
 
 function App() {
   const [formula, setFormula] = useState('');

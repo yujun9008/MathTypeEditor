@@ -1,5 +1,5 @@
 {
-  "name": "@math-type/editor",
+  "name": "react-mathtype-editor",
   "version": "1.0.0",
   "description": "A standalone MathType formula editor component based on React, Ant Design, MathLive, and KaTeX",
   "main": "dist/cjs/index.js",

@@ -188,7 +188,7 @@ interface MathEditorProps {
 ## 12. 部署与发布
 
 ### 12.1 npm 发布
-- 包名：@math-type/editor
+- 包名：react-mathtype-editor
 - 许可证：MIT
 - 文件包含：编译后的代码、类型定义、文档
 
