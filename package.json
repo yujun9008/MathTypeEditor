@@ -38,12 +38,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/math-type/editor.git"
+    "url": "https://github.com/yujun9008/MathTypeEditor.git"
   },
   "bugs": {
-    "url": "https://github.com/math-type/editor/issues"
+    "url": "https://github.com/yujun9008/MathTypeEditor/issues"
   },
-  "homepage": "https://github.com/math-type/editor#readme",
+  "homepage": "https://github.com/yujun9008/MathTypeEditor#readme",
   "peerDependencies": {
     "antd": "^5.0.0",
     "react": "^17.0.0 || ^18.0.0",
