@@ -11,7 +11,7 @@ const const_1 = require("./const");
 require("mathlive");
 require("katex/dist/katex.css");
 require("../styles/mathType.less");
-const MathEditor = ({ defaultValue, onChange, style }) => {
+const MathTypeEditor = ({ defaultValue, onChange, style }) => {
     const [activeKey, setActiveKey] = (0, react_1.useState)(const_1.KATEXLIST[0]?.name || '1');
     const [editMode, setEditMode] = (0, react_1.useState)('mathlive');
     const [latexVal, setLatexVal] = (0, react_1.useState)(defaultValue || '');
@@ -477,4 +477,4 @@ const MathEditor = ({ defaultValue, onChange, style }) => {
                             } }, `${i.name}-${idx}`))) })),
                 })) })] }));
 };
-exports.default = MathEditor;
+exports.default = MathTypeEditor;

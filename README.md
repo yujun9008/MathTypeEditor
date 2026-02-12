@@ -23,7 +23,7 @@ npm install react-mathtype-editor
 
 ```
 import React, { useState } from 'react';
-import { MathEditor } from 'react-mathtype-editor';
+import MathTypeEditor from 'react-mathtype-editor';
 import 'react-mathtype-editor/dist/style.css';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div>
-      <MathEditor 
+      <MathTypeEditor 
         defaultValue={formula}
         onChange={(value) => setFormula(value)}
         style={{ width: '100%' }}

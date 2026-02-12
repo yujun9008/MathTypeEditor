@@ -6,13 +6,13 @@ import 'mathlive'
 import 'katex/dist/katex.css'
 import '../styles/mathType.less'
 
-export interface MathEditorProps {
+export interface MathTypeEditorProps {
   defaultValue?: string
   onChange?: (value: string) => void
   style?: React.CSSProperties
 }
 
-const MathEditor: React.FC<MathEditorProps> = ({ defaultValue, onChange, style }) => {
+const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange, style }) => {
   const [activeKey, setActiveKey] = useState(KATEXLIST[0]?.name || '1')
   const [editMode, setEditMode] = useState('mathlive')
   const [latexVal, setLatexVal] = useState(defaultValue || '')
@@ -592,4 +592,4 @@ const MathEditor: React.FC<MathEditorProps> = ({ defaultValue, onChange, style }
   )
 }
 
-export default MathEditor
+export default MathTypeEditor

@@ -1,5 +1,5 @@
 // MathType Editor Component
 // 入口文件
-import MathEditor from './MathTypeEditor';
-export { MathEditor };
-export default MathEditor;
+import MathTypeEditor from './MathTypeEditor';
+export { MathTypeEditor };
+export default MathTypeEditor;

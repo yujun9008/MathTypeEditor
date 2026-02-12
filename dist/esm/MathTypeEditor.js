@@ -6,7 +6,7 @@ import { KATEXLIST } from './const';
 import 'mathlive';
 import 'katex/dist/katex.css';
 import '../styles/mathType.less';
-const MathEditor = ({ defaultValue, onChange, style }) => {
+const MathTypeEditor = ({ defaultValue, onChange, style }) => {
     const [activeKey, setActiveKey] = useState(KATEXLIST[0]?.name || '1');
     const [editMode, setEditMode] = useState('mathlive');
     const [latexVal, setLatexVal] = useState(defaultValue || '');
@@ -472,4 +472,4 @@ const MathEditor = ({ defaultValue, onChange, style }) => {
                             } }, `${i.name}-${idx}`))) })),
                 })) })] }));
 };
-export default MathEditor;
+export default MathTypeEditor;
