@@ -1,9 +1,5 @@
-// MathType Editor Component
-// 入口文件
-
-// Import styles - these will be bundled by Vite
-import 'katex/dist/katex.css';
-import '../styles/mathType.less';
+// MathType Editor Component - Type exports only
+// This file is used for generating type declarations without CSS imports
 
 import MathTypeEditor from './MathTypeEditor';
 

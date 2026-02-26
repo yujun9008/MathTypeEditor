@@ -3,8 +3,6 @@ import katex from 'katex'
 import React, { useEffect, useRef, useState } from 'react'
 import { KATEXLIST } from './const'
 import 'mathlive'
-import 'katex/dist/katex.css'
-import '../styles/mathType.less'
 
 export interface MathTypeEditorProps {
   defaultValue?: string

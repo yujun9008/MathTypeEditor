@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MathEditor from './MathTypeEditor';
-import 'antd/dist/reset.css'; // Ant Design 5.x 的新样式导入方式
+import 'katex/dist/katex.css';
 import '../styles/mathType.less';
 
 const App = () => {

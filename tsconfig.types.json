@@ -5,16 +5,16 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "outDir": "dist/types",
-    "rootDir": ".",
+    "rootDir": "src",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": false,
-    "jsx": "react-jsxdev"
+    "jsx": "react-jsx"
   },
-  "files": [
+  "include": [
     "src/MathTypeEditor.tsx",
     "src/const.ts",
-    "src/index.ts",
+    "src/index.types.ts",
     "src/declaration.d.ts"
   ],
   "exclude": [
