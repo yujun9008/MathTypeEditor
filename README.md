@@ -2,6 +2,8 @@
 
 一个独立的数学公式编辑器组件，基于 React 和 Ant Design 开发，提供两种公式编辑模式：基于 MathLive 的可视化编辑和基于 LaTeX 的文本编辑。
 
+#### demo 演示：[demo](https\://math.yujun.cloud/)
+
 ## 特性
 
 - 🎨 **双模式编辑**：支持 MathLive 可视化编辑和 LaTeX 文本编辑
