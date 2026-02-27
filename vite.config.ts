@@ -34,7 +34,7 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     rollupOptions: {
-      external: ['react', 'react-dom', 'antd', 'katex', 'mathlive', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'antd', 'katex', 'mathlive'],
       output: {
         exports: 'named',
         globals: {
@@ -43,7 +43,6 @@ export default defineConfig({
           antd: 'antd',
           katex: 'katex',
           mathlive: 'mathlive',
-          'react/jsx-runtime': 'jsxRuntime',
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') return 'index.css'
