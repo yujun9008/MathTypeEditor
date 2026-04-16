@@ -37,7 +37,6 @@ const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange,
   // Sync internal changes to parent
   useEffect(() => {
     if (onChange) {
-      console.log('value', latexVal)
       onChange(latexVal)
     }
   }, [latexVal])

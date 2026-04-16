@@ -16,22 +16,21 @@
 ## 安装
 
 ```bash
-npm install react-mathtype-editor
+npm install react-mathtype-editor katex mathlive
 ```
 
 ## 使用方法
 
-```
+```tsx
 import React, { useState } from 'react';
 import MathTypeEditor from 'react-mathtype-editor';
-import 'react-mathtype-editor/dist/style.css';
 
 function App() {
   const [formula, setFormula] = useState('');
 
   return (
     <div>
-      <MathTypeEditor 
+      <MathTypeEditor
         defaultValue={formula}
         onChange={(value) => setFormula(value)}
         style={{ width: '100%' }}
@@ -41,6 +40,33 @@ function App() {
 }
 
 export default App;
+```
+
+## 在 SSR 框架中使用（Next.js 等）
+
+该组件依赖 MathLive（Web Component），需要浏览器环境，**不支持服务端渲染**。在 Next.js 中需使用动态导入并禁用 SSR：
+
+**App Router：**
+
+```tsx
+'use client'
+import dynamic from 'next/dynamic'
+
+const MathTypeEditor = dynamic(
+  () => import('react-mathtype-editor'),
+  { ssr: false }
+)
+```
+
+**Pages Router：**
+
+```tsx
+import dynamic from 'next/dynamic'
+
+const MathTypeEditor = dynamic(
+  () => import('react-mathtype-editor'),
+  { ssr: false }
+)
 ```
 
 ## API

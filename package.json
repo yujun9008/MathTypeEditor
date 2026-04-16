@@ -5,7 +5,14 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.types.d.ts",
-  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.types.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "sideEffects": ["**/*.css", "**/*.less"],
   "files": [
     "dist/**/*",
     "README.md",
@@ -45,12 +52,10 @@
   "homepage": "https://github.com/yujun9008/MathTypeEditor#readme",
   "peerDependencies": {
     "antd": "^5.0.0",
+    "katex": "^0.16.0",
+    "mathlive": "^0.98.6",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
-  },
-  "dependencies": {
-    "katex": "^0.16.0",
-    "mathlive": "^0.98.6"
   },
   "devDependencies": {
     "@types/katex": "^0.16.0",
