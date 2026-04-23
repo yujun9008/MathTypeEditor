@@ -34,13 +34,12 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     rollupOptions: {
-      external: ['react', 'react-dom', 'antd', 'katex', 'mathlive'],
+      external: ['react', 'react-dom', 'katex', 'mathlive'],
       output: {
         exports: 'named',
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          antd: 'antd',
           katex: 'katex',
           mathlive: 'mathlive',
         },

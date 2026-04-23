@@ -292,16 +292,6 @@ export const KATEXLIST = [
     ],
   },
   {
-    name: '物理',
-    children: [
-      '\\vec{F}=m\\vec{a}',
-      'e=m c^2',
-      '\\vec{F}=m \\frac{d \\vec{v}}{dt} + \\vec{v}\\frac{dm}{dt}',
-      '\\oint \\vec{F} \\cdot d\\vec{s}=0',
-      '\\vec{F}_g=-F\\frac{m_1 m_2}{r^2} \\vec{e}_r',
-    ],
-  },
-  {
     name: '矩阵',
     children: [
       '\\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}',
@@ -312,6 +302,25 @@ export const KATEXLIST = [
     ],
   },
   {
+    name: '物理',
+    children: [
+      '\\vec{F}=m\\vec{a}',
+      'e=m c^2',
+      '\\vec{F}=m \\frac{d \\vec{v}}{dt} + \\vec{v}\\frac{dm}{dt}',
+      '\\oint \\vec{F} \\cdot d\\vec{s}=0',
+      '\\vec{F}_g=-F\\frac{m_1 m_2}{r^2} \\vec{e}_r',
+      'E_k=\\frac{1}{2}mv^2',
+      'W=Fd\\cos\\theta',
+      'p=mv',
+      'U=IR',
+      'F=k\\frac{q_1q_2}{r^2}',
+      'v=f\\lambda',
+      '\\frac{1}{f}=\\frac{1}{u}+\\frac{1}{v}',
+      'Q=mc\\Delta T',
+      '\\varepsilon=-\\frac{d\\Phi}{dt}',
+    ],
+  },
+  {
     name: '化学',
     children: [
       '_{10}^{5}C^{16}',
@@ -319,6 +328,13 @@ export const KATEXLIST = [
       'A\\underset{b}{\\overset{a}{\\longleftrightarrow}}B',
       'A\\underset{0}{\\overset{a}{\\rightleftharpoons}}B',
       'A\\underset{0^{\\circ}C }{\\overset{100^{\\circ}C}{\\rightleftharpoons}}B',
+      'SO_4^{2-}',
+      'NH_4^+',
+      'OH^-',
+      'Fe^{3+}',
+      'CaCO_3\\xrightarrow{\\Delta}CaO+CO_2\\uparrow',
+      'K=\\frac{c^2(B)}{c(A)\\cdot c^3(C)}',
+      '\\Delta H=-\\text{Q kJ/mol}',
     ],
   },
 ]

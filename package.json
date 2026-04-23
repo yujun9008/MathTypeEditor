@@ -1,7 +1,7 @@
 {
   "name": "react-mathtype-editor",
-  "version": "1.0.3",
-  "description": "A standalone MathType formula editor component based on React, Ant Design, MathLive, and KaTeX",
+  "version": "1.0.4",
+  "description": "A standalone MathType formula editor component based on React, MathLive, and KaTeX",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.types.d.ts",
@@ -36,7 +36,6 @@
     "formula",
     "editor",
     "react",
-    "antd",
     "mathematics",
     "equation"
   ],
@@ -51,7 +50,6 @@
   },
   "homepage": "https://github.com/yujun9008/MathTypeEditor#readme",
   "peerDependencies": {
-    "antd": "^5.0.0",
     "katex": "^0.16.0",
     "mathlive": "^0.98.6",
     "react": "^17.0.0 || ^18.0.0",

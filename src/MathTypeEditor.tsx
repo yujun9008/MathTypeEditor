@@ -1,6 +1,5 @@
-import { Input, Segmented, Tabs } from 'antd'
 import katex from 'katex'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { KATEXLIST } from './const'
 import 'mathlive'
 
@@ -15,6 +14,17 @@ const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange,
   const [editMode, setEditMode] = useState('mathlive')
   const [latexVal, setLatexVal] = useState(defaultValue || '')
   const mfRef = useRef<any>(null)
+  const segmentedRef = useRef<HTMLDivElement>(null)
+  const [thumbStyle, setThumbStyle] = useState<React.CSSProperties>({ width: 0, transform: 'translateX(0)' })
+
+  useLayoutEffect(() => {
+    if (!segmentedRef.current) return
+    const items = segmentedRef.current.querySelectorAll<HTMLElement>('.segmented-item')
+    const item = items[editMode === 'mathlive' ? 0 : 1]
+    if (item) {
+      setThumbStyle({ width: item.offsetWidth, transform: `translateX(${item.offsetLeft}px)` })
+    }
+  }, [editMode])
 
   // Initialize value when opening or defaultValue prop changes
   useEffect(() => {
@@ -519,14 +529,17 @@ const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange,
     <div className="MathEditor" style={style}>
       <div className="mathBody">
         <div className="modeSegmented">
-          <Segmented
-            value={editMode}
-            onChange={val => handleModeChange(val.toString())}
-            options={[
-              { label: 'MathType 编辑', value: 'mathlive' },
-              { label: 'LaTex 编辑', value: 'latex' },
-            ]}
-          />
+          <div className="segmented" ref={segmentedRef}>
+            <div className="segmented-thumb" style={thumbStyle} />
+            <button
+              className={`segmented-item${editMode === 'mathlive' ? ' active' : ''}`}
+              onClick={() => handleModeChange('mathlive')}
+            >MathType 编辑</button>
+            <button
+              className={`segmented-item${editMode === 'latex' ? ' active' : ''}`}
+              onClick={() => handleModeChange('latex')}
+            >LaTex 编辑</button>
+          </div>
         </div>
 
         <div className="editContent">
@@ -540,11 +553,12 @@ const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange,
             : (
               <>
                 <div className="editKatax">
-                  <p className="title">latex编辑区域：暂不支持中文字符，请不要输入中文字符</p>
-                  <Input.TextArea
+                  <p className="title">latex编辑区域：</p>
+                  <textarea
+                    className="latex-textarea"
                     value={latexVal}
                     onChange={onLatexChange}
-                    style={{ height: '75px' }}
+                    style={{ height: '60px' }}
                   />
                 </div>
                 <div className="previewKatax">
@@ -561,30 +575,31 @@ const MathTypeEditor: React.FC<MathTypeEditorProps> = ({ defaultValue, onChange,
       </div>
 
       {/* 顶部预制公式 Tabs */}
-      <Tabs
-        activeKey={activeKey}
-        onChange={setActiveKey}
-        className="mathTabs"
-        popupClassName="MathEditorMorePopup"
-        items={KATEXLIST.map(i => ({
-          label: i.name,
-          key: i.name,
-          children: (
-            <>
-              {i.children.map((c, idx) => (
-                <div
-                  className="kataxBody"
-                  key={`${i.name}-${idx}`}
-                  onClick={() => onSelect(c)}
-                  dangerouslySetInnerHTML={{
-                    __html: katex.renderToString(c),
-                  }}
-                />
-              ))}
-            </>
-          ),
-        }))}
-      />
+      <div className="mathTabs">
+        <div className="tabs-nav">
+          {KATEXLIST.map(i => (
+            <div
+              key={i.name}
+              className={`tabs-nav-item${activeKey === i.name ? ' tabs-nav-item-active' : ''}`}
+              onClick={() => setActiveKey(i.name)}
+            >
+              {i.name}
+            </div>
+          ))}
+        </div>
+        <div className="tabs-content">
+          {KATEXLIST.find(i => i.name === activeKey)?.children.map((c, idx) => (
+            <div
+              className="kataxBody"
+              key={`${activeKey}-${idx}`}
+              onClick={() => onSelect(c)}
+              dangerouslySetInnerHTML={{
+                __html: katex.renderToString(c),
+              }}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
